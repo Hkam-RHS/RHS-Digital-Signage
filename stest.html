@@ -1,0 +1,19 @@
+<html>
+<head>
+  <script>
+  // update with the desired time to refresh the presentation (in minutes)
+  var refreshMinutes = 1;
+
+  var timer=setInterval(function(){refreshFrame()}, refreshMinutes*60*1000);
+  function refreshFrame()
+  {
+    var iframe = document.getElementById('presentFrame');
+    var iframeURL = iframe.src;
+    iframe.src = iframeURL;
+  }
+</script>
+</head>
+<body>
+<iframe id="presentFrame"  src="https://docs.google.com/presentation/d/1mCnKQkUxbx1OjcxZ4FfRHhwvH60PTkCEBhziY1rL020/embed?start=true&loop=true&delayms=3000" frameborder="0" width="1440" height="839" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</body>
+</html>

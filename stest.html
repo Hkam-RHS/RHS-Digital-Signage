@@ -1,5 +1,21 @@
 <html>
 <head>
+  <!--This is for the Push Notifications-->
+  <link rel="manifest" href="/manifest.json">
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+<script>
+  var OneSignal = window.OneSignal || [];
+  OneSignal.push(["init", {
+    appId: "15c73fdf-7efd-463d-8ae0-3b47bea014ce",
+    autoRegister: false,
+     persistNotification: false, /* will turn itself off after 20 seconds */
+    notifyButton: {
+      enable: true /* Set to false to hide */
+
+    }
+  }]);
+</script>
+<!--The following is to refresh the page-->
   <script>
   // update with the desired time to refresh the presentation (in minutes)
   var refreshMinutes = 1;
